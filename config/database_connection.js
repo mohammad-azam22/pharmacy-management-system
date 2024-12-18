@@ -1,3 +1,5 @@
+// Database Used: Aiven Online MySQL Database
+
 require('dotenv').config({ path: "./.env" });
 
 const mysql = require('mysql2');
@@ -8,10 +10,10 @@ const config = {
 	host: process.env.DB_HOST,
 	port: process.env.DB_PORT,
 	database: process.env.DB_DATABASE,
-	// ssl: {
-	// rejectUnauthorized: process.env.DB_SSL_REJECT_UNAUTHORIZED,
-	// ca: fs.readFileSync(path.join("./",process.env.DB_SSL_PATH)),
-	// }
+	ssl: {
+	rejectUnauthorized: process.env.DB_SSL_REJECT_UNAUTHORIZED,
+	ca: fs.readFileSync(path.join("./",process.env.DB_SSL_PATH)),
+	}
 };
 
 
