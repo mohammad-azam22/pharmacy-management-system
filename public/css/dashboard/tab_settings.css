@@ -1,0 +1,245 @@
+
+/* ############################################################## */
+/*                            SETTINGS TAB                        */
+/* ############################################################## */
+
+main #dynamic-container .top-container {
+	width: 100%;
+	height: 17vh;
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+	font-family: var(--text);
+	font-size: 1em;
+	flex-direction: column;
+}
+
+main #dynamic-container .bottom-container {
+	width: 100%;
+	height: 55vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	padding: 1em;
+}
+
+main #dynamic-container .bottom-container button{
+	height: 10vh;
+	width: 25vw;
+	margin: 1em;
+	background-color: var(--accent);
+	font-family: var(--button);
+	transition-duration: 0.25s;
+	font-size: 1em;
+	font-weight: bold;
+	border: 2px solid #000;
+	cursor: pointer;
+	border-radius: 1em;
+}
+
+main #dynamic-container .bottom-container button:hover{
+	background-color: var(--hover);
+	color: var(--primary);
+}
+
+
+/* ############################################################## */
+/*                           ADD USER POPUP                       */
+/* ############################################################## */
+
+
+main .popup .add-user-title {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+main .popup .add-user-title h2 {
+	font-family: var(--heading);
+	font-size: 1.5em;
+	text-align: center;
+    margin: 1em auto;
+}
+
+main .popup .add-user-title button {
+	background-color: #de4b4b;
+	border: 1px solid #000;
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin: 1em;
+}
+
+main .popup .add-user-title button:hover {
+	background-color: #de2626;
+}
+
+main .popup .add-user-title button:hover img {
+	filter: invert(100%);
+}
+
+main .popup .add-user-title button img {
+	background-color: transparent;
+	width: 1em;
+	height: 1em;
+	margin: 5px;
+}
+
+main .popup #add-user-form {
+	padding: 1em;
+	/* margin: 1em; */
+	display: flex;
+	flex-direction: column;
+	font-family: var(--text);
+	font-size: 1em;
+}
+
+main .popup #add-user-form .row {
+	width: 50vw;
+	margin: 1vh auto;
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
+
+main .popup #add-user-form .row input, select {
+	width: 30vw;
+	height: 4vh;
+	padding: 5px;
+}
+
+main .popup #add-user-form button {
+	width: 10em;
+    height: 2em;
+	margin: 1em auto;
+    background-color: var(--green-btn);
+    border: 1px solid #000;
+	transition-duration: 0.25s;
+	font-family: var(--button);
+	font-weight: bold;
+	font-size: 1em;
+	border-radius: 0.5em;
+}
+
+main .popup #add-user-form button:hover {
+	background-color: var(--green-btn-hover);
+	color: var(--primary);
+}
+
+
+/* ############################################################## */
+/*                        MANAGE USER POPUP                       */
+/* ############################################################## */
+
+
+main .popup .manage-user-title {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+main .popup .manage-user-title h2 {
+	font-family: var(--heading);
+	font-size: 1.5em;
+	text-align: center;
+    margin: 1em auto;
+}
+
+main .popup .manage-user-title button {
+	background-color: #de4b4b;
+	border: 1px solid #000;
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin: 1em;
+}
+
+main .popup .manage-user-title button:hover {
+	background-color: #de2626;
+}
+
+main .popup .manage-user-title button:hover img {
+	filter: invert(100%);
+}
+
+main .popup .manage-user-title button img {
+	background-color: transparent;
+	width: 1em;
+	height: 1em;
+	margin: 5px;
+}
+
+main .popup .user-authorization {
+	margin: 1em;
+    overflow: auto;
+    height: 50vh;
+    border: 2px solid #000;
+}
+
+main .popup .user-authorization table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	min-width: 50em;
+	table-layout: fixed;
+}
+
+main .popup .user-authorization .sticky-header {
+	position: sticky;
+	top: 0;
+	min-width: 50em;
+}
+
+main .popup .user-authorization td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	height: 2em;
+	word-wrap: break-word;
+}
+
+main .popup .user-authorization th {
+	text-align: center;
+	background-color: var(--secondary);
+	height: 2.2em;
+}
+
+main .popup .user-authorization tr {
+	transition-duration: 0.25s;
+}
+
+main .popup .user-authorization td:hover {
+	background-color: var(--secondary);
+}
+
+main .popup .manage-user-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .popup .manage-user-controls button {
+	width: 10em;
+	height: 3em;
+	background-color: var(--green-btn);
+	color: #000;
+	transition-duration: 0.25s;
+	font-size: 1em;
+	font-family: var(--button);
+	font-weight: bold;
+	border: 1px solid #000;
+	cursor: pointer;
+	border-radius: 1em;
+}
+
+main .popup .manage-user-controls button:hover {
+	background-color: var(--green-btn-hover);
+	color: var(--primary);
+}

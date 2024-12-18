@@ -1,0 +1,49 @@
+/* ############################################################## */
+/*                            PRINT BILL                          */
+/* ############################################################## */
+
+@media print {
+
+	nav .date-time {
+		display: none;
+	}
+
+	main .main-container {
+		display: none;
+	}
+
+	.sidebar {
+		display: none;
+	}
+
+	main .popup {
+		height: -webkit-fill-available;
+		width: -webkit-fill-available;
+		top: 0in;
+		left: 0in;
+		background: none;
+		border: none;
+	}
+
+	main .popup .title {
+		display: none;
+	}
+
+	main .popup .controls {
+		display: none;
+	}
+
+	main .popup .scrollable-page {
+		height: fit-content;
+		top: 1.5in;
+		font-size: 12px;
+	}
+
+	main .popup .scrollable-page .med-info table {
+		min-width: unset;
+	}
+
+	footer {
+		display: none;
+	}
+}

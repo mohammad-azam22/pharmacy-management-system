@@ -1,0 +1,288 @@
+/* ############################################################## */
+/*                     DISPENSE MEDICATION TAB                    */
+/* ############################################################## */
+
+main .display-area #dispense-form {
+    width: 90%;
+    font-family: var(--text);
+
+}
+
+main .display-area #dispense-form legend {
+    font-family: var(--heading);
+    font-weight: 900;
+}
+
+main .display-area #dispense-form #checkup-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin: 1em;
+    border-style: inset;
+    border-color: var(--accent);
+    border-width: 2px;
+}
+
+main .display-area #dispense-form #checkup-info input {
+    width: 40vw;
+    height: 2em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+
+main .display-area #dispense-form #med-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin: 1em;
+    border-style: inset;
+    border-color: var(--accent);
+    border-width: 2px;
+}
+
+
+main .display-area #dispense-form #med-info .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0em 1em 0em;
+}
+
+main .display-area #dispense-form #med-info .row .left {
+    width: 80%;
+}
+
+main .display-area #dispense-form #med-info .row .left .top,
+.mid,
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .display-area #dispense-form #med-info .row .left label {
+    display: inline-block;
+}
+
+main .display-area #dispense-form #med-info input {
+    width: 40%;
+    height: 2em;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+
+/* main .display-area #dispense-form #med-info #quantity {
+	width: 10vw;
+} */
+
+main .display-area #dispense-form #med-info button {
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.25s;
+}
+
+main .display-area #dispense-form #med-info button img {
+    width: 1em;
+    height: 1em;
+    margin: 0.5em;
+    transition-duration: 0.25s;
+}
+
+main .display-area #dispense-form #med-info .del-row {
+    background-color: var(--red-btn);
+    border: 1px solid #000;
+}
+
+main .display-area #dispense-form #med-info .del-row:hover {
+    background-color: var(--red-btn-hover);
+}
+
+main .display-area #dispense-form #med-info .del-row:hover img {
+    filter: invert(100%);
+}
+
+main .display-area #dispense-form #med-info #add-row {
+    background-color: var(--green-btn);
+    border: 1px solid #000;
+}
+
+main .display-area #dispense-form #med-info #add-row:hover {
+    background-color: var(--green-btn-hover);
+}
+
+main .display-area #dispense-form #med-info #add-row:hover img {
+    filter: invert(100%);
+}
+
+main .display-area #dispense-form #submit {
+    width: 15em;
+    height: 3em;
+    margin: 1em;
+    background-color: var(--accent);
+    border: 1px solid #000;
+    cursor: pointer;
+    font-family: var(--button);
+    font-weight: bold;
+    transition-duration: 0.25s;
+    border-radius: 0.5em;
+}
+
+main .display-area #dispense-form #submit:hover {
+    background-color: var(--hover);
+    color: var(--primary);
+}
+
+/* ############################################################## */
+/*                             POP-UP                             */
+/* ############################################################## */
+
+main .popup {
+    position: absolute;
+    height: 80vh;
+    width: 70vw;
+    top: 10vh;
+    left: 15vw;
+    border-radius: 1em;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+}
+
+main .popup .title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    width: 94%;
+    height: 10%;
+    left: 3%;
+    top: 3%;
+
+}
+
+main .popup .title img {
+    width: 3em;
+    height: 3em;
+}
+
+main .popup .title p {
+    font-family: var(--heading);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+main .popup .title button {
+    background-color: #de4b4b;
+    border: 1px solid #000;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+main .popup .title button:hover {
+    background-color: #de2626;
+}
+
+main .popup .title button:hover img {
+    filter: invert(100%);
+}
+
+main .popup .title button img {
+    background-color: transparent;
+    width: 1em;
+    height: 1em;
+    margin: 5px;
+}
+
+main .popup .scrollable-page {
+    position: absolute;
+    height: 65%;
+    overflow: auto;
+    top: 17%;
+    width: 94%;
+    left: 3%;
+    border: 2px solid #000;
+}
+
+main .popup .scrollable-page .header {
+    margin: 1em;
+    font-family: var(--text);
+    font-size: 1em;
+}
+
+main .popup .scrollable-page .med-info {
+    margin: 1em;
+}
+
+main .popup .scrollable-page .med-info table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    min-width: 50em;
+}
+
+main .popup .scrollable-page .med-info td {
+    overflow: hidden;
+    /* word-break: break-all; */
+    word-wrap: break-word;
+}
+
+main .popup .scrollable-page .med-info td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    height: 2em;
+}
+
+main .popup .scrollable-page .med-info th {
+    background-color: var(--secondary);
+}
+
+main .popup .scrollable-page .med-info tr {
+    transition-duration: 0.25s;
+}
+
+main .popup .scrollable-page .med-info tr:hover {
+    background-color: var(--secondary);
+}
+
+main .popup .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 87%;
+    width: 80%;
+    left: 10%;
+    height: 10%;
+}
+
+main .popup .controls button {
+    height: 3em;
+    width: 6em;
+    background-color: var(--accent);
+    cursor: pointer;
+    border: 1px solid #000;
+    margin: 1em;
+    color: #000;
+    transition-duration: 0.25s;
+    font-family: var(--button);
+    font-size: 1em;
+    border-radius: 1em;
+}
+
+main .popup .controls button:hover {
+    background-color: var(--hover);
+    color: var(--primary);
+}

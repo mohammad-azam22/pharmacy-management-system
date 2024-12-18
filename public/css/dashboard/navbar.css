@@ -1,0 +1,36 @@
+/* ############################################################## */
+/*                              NAVIGATION BAR                    */
+/* ############################################################## */
+
+nav {
+	background-color: var(--accent);
+	top: 0;
+	position: sticky;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1;
+}
+
+nav .nav-container {
+	display: flex;
+	align-items: center;
+}
+
+nav .nav-container img {
+	width: 2em;
+	height: 2em;
+	margin: 1em;
+}
+
+nav .nav-container p {
+	font-family: var(--heading);
+	font-size: 1.5em;
+}
+
+nav .date-time span {
+	margin: 1em;
+	font-family: var(--text);
+	font-size: 1em;
+}

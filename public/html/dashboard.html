@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MediSync | Workspace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard/core.css">
+    <link rel="stylesheet" href="../css/dashboard/navbar.css">
+    <link rel="stylesheet" href="../css/dashboard/main_container.css">
+    <link rel="stylesheet" href="../css/dashboard/sidebar.css">
+    <link rel="stylesheet" href="../css/dashboard/tab_dispense_medication.css">
+    <link rel="stylesheet" href="../css/dashboard/tab_manage_inventory.css">
+    <link rel="stylesheet" href="../css/dashboard/tab_analyze.css">
+    <link rel="stylesheet" href="../css/dashboard/tab_settings.css">
+    <link rel="stylesheet" href="../css/dashboard/footer.css">
+    <link rel="stylesheet" href="../css/dashboard/print_bill.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container prevent-select">
+            <img src="../images/logo1.png" alt="MediSync Logo">
+            <a href="/" style="text-decoration: none; color: #000;">
+                <p>Medi<i>Sync</i></p>
+            </a>
+        </div>
+        <div class="date-time prevent-select">
+            <span id="date"></span><br>
+            <span id="time"></span>
+        </div>
+    </nav>
+    <main>
+        <div class="main-container">
+            <div class="sidebar prevent-select">
+                <div>
+                    <button class="dashboard-tab" onclick=tab_dashboard()>
+                        <img src="../images/dashboard.png" alt="dahsboard">
+                        <span>Dashboard</span>
+                    </button>
+                    <button class="dashboard-tab" onclick=tab_manage_inventory()>
+                        <img src="../images/inventory.png" alt="inventory">
+                        <span>Manage Inventory</span>
+                    </button>
+                    <button class="dashboard-tab" onclick=tab_dispense_medication()>
+                        <img src="../images/dispense.png" alt="dispense">
+                        <span>Dispense Medication</span>
+                    </button>
+                    <button class="dashboard-tab" onclick=tab_analyze()>
+                        <img src="../images/analyze.png" alt="analyze">
+                        <span>Analyze</span>
+                    </button>
+                    <button class="dashboard-tab" onclick=tab_settings()>
+                        <img src="../images/admin.png" alt="admin console">
+                        <span>Settings</span>
+                    </button>
+                </div>
+            </div>
+            <div class="display-area prevent-select">
+                <div id="dynamic-container">
+                    <!-- Dynamically Populated -->
+                    <!-- <div class="controls-container">
+                        <div class="control-col">
+                            <label for="metric">Metric:</label>
+                            <select name="metric" id="metric">
+                                <option value="NA">Select Metric</option>
+                                <option value="sales">Sales</option>
+                            </select>
+                        </div>
+                        <div class="control-col">
+                            <label for="aggregate">Aggregate:</label>
+                            <select name="aggregate" id="aggregate">
+                                <option value="NA">Select Aggregate</option>
+                                <option value="avg">Average</option>
+                                <option value="sum">Sum</option>
+                            </select>
+                        </div>
+                        <div class="control-col">
+                            <label for="granularity">Granularity:</label>
+                            <select name="granularity" id="granularity">
+                                <option value="NA">Select Granularity</option>
+                                <option value="yearly">Yearly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="daily">Daily</option>
+                            </select>
+                        </div>
+                        <div class="control-col">
+                            <button type="submit" onclick="fetch_chart_data()">Generate Chart</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="myChart" style="display: block; max-width: 75%; max-height: 100%;"></canvas>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container prevent-select">
+            <div class="top-container">
+                <p>© Copyright. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/dashboard/show_date_time.js"></script>
+    <script src="../js/dashboard/set_button_active.js"></script>
+    <script src="../js/dashboard/close_popup.js"></script>
+    <script src="../js/dashboard/tab_analyze.js"></script>
+    <script src="../js/dashboard/tab_dashboard.js"></script>
+    <script src="../js/dashboard/tab_dispense_medication.js"></script>
+    <script src="../js/dashboard/tab_manage_inventory.js"></script>
+    <script src="../js/dashboard/tab_settings.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- 
+<a href="https://www.flaticon.com/free-icons/list" title="list icons">List icons created by Chanut - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/drug" title="drug icons">Drug icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/coin" title="coin icons">Coin icons created by Ardiansyah - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/box" title="box icons">Box icons created by Pixel perfect - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/dashboard" title="dashboard icons">Dashboard icons created by Pixel perfect - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/logout" title="logout icons">Logout icons created by SumberRejeki - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/trash-can" title="trash can icons">Trash can icons created by Md Tanvirul Haque - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by srip - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by ariefstudio - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by riajulislam - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/tick" title="tick icons">Tick icons created by Pixel perfect - Flaticon</a>
+-->
