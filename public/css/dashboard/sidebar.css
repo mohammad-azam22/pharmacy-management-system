@@ -1,0 +1,49 @@
+/* ############################################################## */
+/*                             SIDEBAR                            */
+/* ############################################################## */
+
+main .sidebar {
+	background-color: var(--secondary);
+	width: fit-content;
+	height: fit-content;
+	border-radius: 0em 1em 1em 0em;
+}
+
+main .sidebar div button {
+	background: none;
+	border: none;
+	width: 100%;
+	padding: 1em;
+	font-size: 1.1em;
+	text-align: left;
+	color: #000;
+	font-family: var(--heading);
+	display: flex;
+	align-items: center;
+	transition-duration: 0.25s;
+}
+
+main .main-container .sidebar div button:first-child {
+	border-radius: 0em 1em 0em 0em;
+}
+
+main .main-container .sidebar div button:last-child {
+	border-radius: 0em 0em 1em 0em;
+}
+
+main .sidebar div button:hover {
+	background-color: var(--hover);
+	color: var(--primary);
+	cursor: pointer;
+}
+
+main .sidebar div button:hover img {
+	filter: invert(100%);
+}
+
+main .sidebar img {
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0.5em;
+	transition-duration: 0.25s;
+}

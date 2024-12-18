@@ -1,0 +1,568 @@
+/* ############################################################## */
+/*                     MANAGE INVENTORY TAB                       */
+/* ############################################################## */
+
+main .display-area #add-medication-form {
+    width: 90%;
+    font-family: var(--text);
+
+}
+
+main .display-area #add-medication-form legend {
+    font-family: var(--heading);
+    font-weight: 900;
+}
+
+main .display-area #add-medication-form #checkup-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin: 1em;
+    border-style: inset;
+    border-color: var(--accent);
+    border-width: 2px;
+}
+
+main .display-area #add-medication-form #checkup-info input {
+    width: 40vw;
+    height: 2em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+
+main .display-area #add-medication-form #med-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin: 1em;
+    border-style: inset;
+    border-color: var(--accent);
+    border-width: 2px;
+}
+
+
+main .display-area #add-medication-form #med-info .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0em 1em 0em;
+}
+
+main .display-area #add-medication-form #med-info .row .left {
+    width: 80%;
+}
+
+main .display-area #add-medication-form #med-info .row .left .top,
+.mid,
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .display-area #add-medication-form #med-info .row .left label {
+    display: inline-block;
+}
+
+main .display-area #add-medication-form #med-info input {
+    width: 40%;
+    height: 2em;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+main .display-area #add-medication-form #med-info button {
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.25s;
+}
+
+main .display-area #add-medication-form #med-info button img {
+    width: 1em;
+    height: 1em;
+    margin: 0.5em;
+    transition-duration: 0.25s;
+}
+
+main .display-area #add-medication-form #med-info .del-row {
+    background-color: var(--red-btn);
+    border: 1px solid #000;
+}
+
+main .display-area #add-medication-form #med-info .del-row:hover {
+    background-color: var(--red-btn-hover);
+}
+
+main .display-area #add-medication-form #med-info .del-row:hover img {
+    filter: invert(100%);
+}
+
+main .display-area #add-medication-form #med-info #add-row {
+    background-color: var(--green-btn);
+    border: 1px solid #000;
+}
+
+main .display-area #add-medication-form #med-info #add-row:hover {
+    background-color: var(--green-btn-hover);
+}
+
+main .display-area #add-medication-form #med-info #add-row:hover img {
+    filter: invert(100%);
+}
+
+main .display-area #add-medication-form #submit {
+    width: 15em;
+    height: 3em;
+    margin: 1em;
+    background-color: var(--accent);
+    border: 1px solid #000;
+    cursor: pointer;
+    font-family: var(--button);
+    font-weight: bold;
+    transition-duration: 0.25s;
+}
+
+main .display-area #add-medication-form #submit:hover {
+    background-color: var(--hover);
+    color: var(--primary);
+}
+
+/* ############################################################## */
+/*                       ADD MEDICATION POPUP                     */
+/* ############################################################## */
+
+
+main .popup .add-medication-title {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+main .popup .add-medication-title h2 {
+	font-family: var(--heading);
+	font-size: 1.5em;
+	text-align: center;
+    margin: 1em auto;
+}
+
+main .popup .add-medication-title button {
+	background-color: #de4b4b;
+	border: 1px solid #000;
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin: 1em;
+}
+
+main .popup .add-medication-title button:hover {
+	background-color: #de2626;
+}
+
+main .popup .add-medication-title button:hover img {
+	filter: invert(100%);
+}
+
+main .popup .add-medication-title button img {
+	background-color: transparent;
+	width: 1em;
+	height: 1em;
+	margin: 5px;
+}
+
+main .popup #add-medication-form {
+	padding: 1em;
+	/* margin: 1em; */
+	display: flex;
+	flex-direction: column;
+	font-family: var(--text);
+	font-size: 1em;
+}
+
+main .popup #add-medication-form .row {
+	width: 50vw;
+	margin: 1vh auto;
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
+
+main .popup #add-medication-form .row input, select {
+	width: 30vw;
+	height: 4vh;
+	padding: 5px;
+}
+
+main .popup #add-medication-form button {
+	width: 10em;
+    height: 2em;
+	margin: 1em auto;
+    background-color: var(--green-btn);
+    border: 1px solid #000;
+	transition-duration: 0.25s;
+	font-family: var(--button);
+	font-weight: bold;
+	font-size: 1em;
+	border-radius: 0.5em;
+}
+
+main .popup #add-medication-form button:hover {
+	background-color: var(--green-btn-hover);
+	color: var(--primary);
+}
+
+/* ############################################################## */
+/*                  IN STOCK MEDICATION POPUP                     */
+/* ############################################################## */
+
+
+main .popup .in-stock-medication-title {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+main .popup .in-stock-medication-title h2 {
+	font-family: var(--heading);
+	font-size: 1.5em;
+	text-align: center;
+    margin: 1em auto;
+}
+
+main .popup .in-stock-medication-title button {
+	background-color: #de4b4b;
+	border: 1px solid #000;
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin: 1em;
+}
+
+main .popup .in-stock-medication-title button:hover {
+	background-color: #de2626;
+}
+
+main .popup .in-stock-medication-title button:hover img {
+	filter: invert(100%);
+}
+
+main .popup .in-stock-medication-title button img {
+	background-color: transparent;
+	width: 1em;
+	height: 1em;
+	margin: 5px;
+}
+
+main .popup .in-stock-medication {
+	margin: 1em;
+    overflow: auto;
+    height: 50vh;
+    border: 2px solid #000;
+}
+
+main .popup .in-stock-medication table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	min-width: 50em;
+	table-layout: fixed;
+}
+
+main .popup .in-stock-medication .sticky-header {
+	position: sticky;
+	top: 0;
+	min-width: 50em;
+}
+
+main .popup .in-stock-medication td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	height: 2em;
+	word-wrap: break-word;
+}
+
+main .popup .in-stock-medication th {
+	text-align: center;
+	background-color: var(--secondary);
+	height: 2.2em;
+}
+
+main .popup .in-stock-medication tr {
+	transition-duration: 0.25s;
+}
+
+main .popup .in-stock-medication tr:hover {
+	background-color: var(--secondary);
+}
+
+main .popup .in-stock-medication-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .popup .in-stock-medication-controls button {
+	width: 10em;
+	height: 3em;
+	background-color: var(--green-btn);
+	color: #000;
+	transition-duration: 0.25s;
+	font-size: 1em;
+	font-family: var(--button);
+	font-weight: bold;
+	border: 1px solid #000;
+	cursor: pointer;
+	border-radius: 1em;
+}
+
+main .popup .in-stock-medication-controls button:hover {
+	background-color: var(--green-btn-hover);
+	color: var(--primary);
+}
+
+/* ############################################################## */
+/*                  OUT OF STOCK MEDICATION POPUP                 */
+/* ############################################################## */
+
+
+main .popup .out-of-stock-medication-title {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+main .popup .out-of-stock-medication-title h2 {
+	font-family: var(--heading);
+	font-size: 1.5em;
+	text-align: center;
+    margin: 1em auto;
+}
+
+main .popup .out-of-stock-medication-title button {
+	background-color: #de4b4b;
+	border: 1px solid #000;
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin: 1em;
+}
+
+main .popup .out-of-stock-medication-title button:hover {
+	background-color: #de2626;
+}
+
+main .popup .out-of-stock-medication-title button:hover img {
+	filter: invert(100%);
+}
+
+main .popup .out-of-stock-medication-title button img {
+	background-color: transparent;
+	width: 1em;
+	height: 1em;
+	margin: 5px;
+}
+
+main .popup .out-of-stock-medication {
+	margin: 1em;
+    overflow: auto;
+    height: 50vh;
+    border: 2px solid #000;
+}
+
+main .popup .out-of-stock-medication table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	min-width: 50em;
+	table-layout: fixed;
+}
+
+main .popup .out-of-stock-medication .sticky-header {
+	position: sticky;
+	top: 0;
+	min-width: 50em;
+}
+
+main .popup .out-of-stock-medication td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	height: 2em;
+	word-wrap: break-word;
+}
+
+main .popup .out-of-stock-medication th {
+	text-align: center;
+	background-color: var(--secondary);
+	height: 2.2em;
+}
+
+main .popup .out-of-stock-medication tr {
+	transition-duration: 0.25s;
+}
+
+main .popup .out-of-stock-medication tr:hover {
+	background-color: var(--secondary);
+}
+
+main .popup .out-of-stock-medication-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .popup .out-of-stock-medication-controls button {
+	width: 10em;
+	height: 3em;
+	background-color: var(--green-btn);
+	color: #000;
+	transition-duration: 0.25s;
+	font-size: 1em;
+	font-family: var(--button);
+	font-weight: bold;
+	border: 1px solid #000;
+	cursor: pointer;
+	border-radius: 1em;
+}
+
+main .popup .out-of-stock-medication-controls button:hover {
+	background-color: var(--green-btn-hover);
+	color: var(--primary);
+}
+
+
+/* ############################################################## */
+/*                  DISCARD MEDICATION POPUP                      */
+/* ############################################################## */
+
+
+main .popup .discard-medication-title {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+main .popup .discard-medication-title h2 {
+	font-family: var(--heading);
+	font-size: 1.5em;
+	text-align: center;
+    margin: 1em auto;
+}
+
+main .popup .discard-medication-title button {
+	background-color: #de4b4b;
+	border: 1px solid #000;
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin: 1em;
+}
+
+main .popup .discard-medication-title button:hover {
+	background-color: #de2626;
+}
+
+main .popup .discard-medication-title button:hover img {
+	filter: invert(100%);
+}
+
+main .popup .discard-medication-title button img {
+	background-color: transparent;
+	width: 1em;
+	height: 1em;
+	margin: 5px;
+}
+
+main .popup .discard-medication {
+	margin: 1em;
+    overflow: auto;
+    height: 50vh;
+    border: 2px solid #000;
+}
+
+main .popup .discard-medication table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	min-width: 50em;
+	table-layout: fixed;
+}
+
+main .popup .discard-medication .sticky-header {
+	position: sticky;
+	top: 0;
+	min-width: 50em;
+}
+
+main .popup .discard-medication td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+	height: 2em;
+	word-wrap: break-word;
+}
+
+main .popup .discard-medication th {
+	text-align: center;
+	background-color: var(--secondary);
+	height: 2.2em;
+}
+
+main .popup .discard-medication tr {
+    height: 3em;
+	transition-duration: 0.25s;
+}
+
+main .popup .discard-medication tr:hover {
+	background-color: var(--secondary);
+}
+
+ 
+main .popup .discard-medication tr td img {
+    width: 2em;
+    height: 2em;
+}
+
+main .popup .discard-medication-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .popup .discard-medication-controls button {
+	width: 10em;
+	height: 3em;
+	background-color: var(--green-btn);
+	color: #000;
+	transition-duration: 0.25s;
+	font-size: 1em;
+	font-family: var(--button);
+	font-weight: bold;
+	border: 1px solid #000;
+	cursor: pointer;
+	border-radius: 1em;
+}
+
+main .popup .discard-medication-controls button:hover {
+	background-color: var(--green-btn-hover);
+	color: var(--primary);
+}
+
+

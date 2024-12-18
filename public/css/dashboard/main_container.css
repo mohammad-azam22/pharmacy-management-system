@@ -1,0 +1,17 @@
+/* ############################################################## */
+/*                        MAIN CONTAINER                          */
+/* ############################################################## */
+
+main {
+	height: 85vh;
+}
+
+main .main-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	filter: none;
+	pointer-events: auto;
+	transition: filter 0.25s;
+}

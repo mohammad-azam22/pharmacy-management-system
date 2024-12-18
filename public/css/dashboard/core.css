@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* Colors */
+	--primary: #ffffff;
+	--secondary: rgb(161 233 245);
+	--accent: rgb(111 183 195);
+	--hover: rgb(61 133 145);
+	--green-btn: rgb(49 196 54);
+	--green-btn-hover: rgb(19 166 24);
+	--red-btn: rgb(255 89 89);
+	--red-btn-hover: rgb(225, 59, 59);
+	/* Fonts */
+	--heading: "Roboto", sans-serif;
+	--text: "Poppins", sans-serif;
+	--button: "Open Sans", sans-serif;
+}
+
+body {
+	overflow: hidden;
+}
+
+.prevent-select {
+	-webkit-user-select: none;
+	/* Safari */
+	-ms-user-select: none;
+	/* IE 10 and IE 11 */
+	user-select: none;
+	/* Standard syntax */
+}
+
+.button-hover {
+	background-color: var(--hover) !important;
+	color: var(--primary) !important;
+}
+
+.invert-color {
+	filter: invert(100%) !important;
+}
+
+/* ############################################################## */
+/*                              SCROLL BAR                        */
+/* ############################################################## */
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+    height: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--accent);
+	border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--hover);
+}

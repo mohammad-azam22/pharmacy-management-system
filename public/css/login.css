@@ -1,0 +1,206 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* Colors */
+	--primary: #ffffff;
+	--secondary: rgb(161 233 245);
+	--accent: rgb(111 183 195);
+	--hover: rgb(61 133 145);
+	--green-btn: rgb(49 196 54);
+	--green-btn-hover: rgb(19 166 24);
+	--red-btn: rgb(255 89 89);
+	--red-btn-hover: rgb(225, 59, 59);
+	/* Fonts */
+	--heading: "Roboto", sans-serif;
+	--text: "Poppins", sans-serif;
+	--button: "Open Sans", sans-serif;
+}
+
+.prevent-select {
+	-webkit-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+}
+
+/* ############################################################## */
+/*                              SCROLL BAR                        */
+/* ############################################################## */
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+    height: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--accent);
+	border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--hover);
+}
+
+body {
+	overflow: hidden;
+}
+
+/* ############################################################## */
+/*                              NAVIGATION BAR                    */
+/* ############################################################## */
+
+nav {
+	background-color: var(--accent);
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1;
+}
+
+nav .nav-container {
+	display: flex;
+	align-items: center;
+}
+
+nav .nav-container img {
+	width: 2em;
+	height: 2em;
+	margin: 1em;
+	border-radius: 0.2em;
+}
+
+nav .nav-container p {
+	font-family: var(--heading);
+	font-size: 1.5em;
+}
+
+/* ############################################################## */
+/*                           MAIN BODY                            */
+/* ############################################################## */
+
+
+input {
+	padding: 10px;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	font-family: var(--text);
+}
+
+button {
+	width: 15em;
+	height: 3em;
+	background-color: var(--accent);
+	color: var(--primary);
+	border: none;
+	border-radius: 1em;
+	cursor: pointer;
+	margin: 1em;
+	font-family: var(--button);
+	font-size: 1rem;
+	font-weight: 500;
+	color: #000;
+	transition-duration: 0.25s;
+}
+
+button:hover {
+	background-color: var(--hover);
+	color: var(--primary);
+}
+
+.left-panel {
+	float: left;
+	width: 50%;
+	height: 85vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--primary);
+}
+
+.left-panel h1 {
+	font-family: var(--heading);
+	font-size: 2rem;
+	text-align: center;
+}
+
+.left-panel img {
+	height: 10em;
+	margin: 2em;
+	margin: 2em;
+	border-radius: 1em;
+	transition-duration: 0.25s;
+}
+
+.right-panel {
+	float: right;
+	width: 50%;
+	height: 85vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--secondary);
+}
+
+.right-panel h1 {
+	text-align: center;
+	font-family: var(--heading);
+}
+
+.right-panel #login-form {
+	margin: 3em 0em;
+	display: flex;
+	flex-direction: column;
+	margin: 3em 0em;
+}
+
+.right-panel #login-form label {
+	font-family: var(--text);
+}
+
+
+.right-panel #login-form input:valid {
+	border: 1px solid var(--accent);
+}
+
+.right-panel #login-form input:invalid {
+	border: 1px solid #ff0000;
+}
+
+.right-panel .message {
+	text-align: center;
+	margin: 2em;
+    width: 60%;
+}
+
+
+
+/* ############################################################## */
+/*                                   FOOTER                       */
+/* ############################################################## */
+
+footer {
+	background-color: var(--accent);
+	width: 100%;
+	height: 5vh;
+	;
+	bottom: 0;
+	position: absolute;
+	padding: 5px;
+}
+
+footer .footer-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
