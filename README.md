@@ -39,11 +39,11 @@ node server.js
 ## Usage
 Once the server is running, you can use the application to manage pharmacy operations. The main features include:
 
-Adding and updating inventory: Add new products and update existing ones.
-
-Processing sales: Record sales transactions and generate receipts.
-
-Managing customers: Add new customers and view their purchase history.
+- Adding and updating inventory: Add new medicaiton and update existing ones.
+- Removing medicaitons: Removing expired medicaitons from the inventory.
+- Dispensing Medications: Dispensing medications to the patients based on the prescriptions.
+- Analysis: Analyze the sales by plotting line graphs.
+- User management: adding new users and managing existing users' authorizations.
 
 ## Contributing
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:
