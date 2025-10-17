@@ -1,6 +1,6 @@
 # Pharmacy Management System
 
-A Pharmacy Management System made using HTML, CSS, and JavaScript.
+A Pharmacy Management System built using HTML, CSS,  JavaScript, Node.js, Express and MySQL. It includes features for managing inventory, sales transactions, and customer information. With secure user authentication along with RBAC, the application ensures that only authorized personnel can access and manage the data.
 
 ## Table of Contents
 - [Introduction](#introduction)
